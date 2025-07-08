@@ -1,0 +1,109 @@
+/* styles/about.css */
+
+#fcf8c8	
+#dc143b	
+#e76a4c	
+#fae7ad	
+#f0b37c
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Header and Navigation */
+header {
+  background-color: #fae7ad;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #222;
+}
+
+/* Hamburger menu (hidden by default) */
+#check,
+.checktn,
+.nav-mobile {
+  display: none;
+}
+
+/* Main Section */
+main {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#about-creators h1 {
+  font-size: 2rem;
+  color: #ff914d;
+  margin-bottom: 20px;
+}
+
+#about-creators p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #ff914d;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  main {
+    padding: 20px;
+  }
+}
