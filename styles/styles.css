@@ -10,45 +10,7 @@
   --button-bg: #e8c29d;
   --text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
-
-
-
-/* logo */
-.logo{
-  display: inline-block;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid #333;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-}
-.logo:hover {
-  box-shadow:0 4px 16px rgba(0, 0, 0, 0.2);
-}
-
-.logo-img {
-  width: 60px;
-  height: 60px;
-  display: block;
-  object-fit: cover;
-  border-radius: 50%;
-}
-/* ending of logo */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Fredoka', sans-serif;
-  background-color: var(--primary-bg);
-  color: var(--primary-color);
-  padding: 20px;
-  line-height: 1.6;
-}
-
+/* header section */
 header {
   display: flex;
   justify-content: space-between;
@@ -73,154 +35,50 @@ header {
   display: block;
 }
 
-.interaction-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 40px;
-  justify-content: center;
+/* general attributes */
+main{
+  margin: 0;
+  display: grid;
 }
 
-#shortg {
-  flex: 1 1 280px;
-  min-height: 200px;
-  background-color: #d3d3d3;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
+/* Hero images */
+.heroBackground{
+  width: 1200px;
+  display: grid;
+  grid-row: 1/4;
+  grid-template-columns: repeat(4, 25%);
 }
 
-#shortg-info {
-  flex: 1 1 280px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
 
-#shortg-info ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-#shortg-info li {
-  margin-bottom: 8px;
-}
-
-.description-box {
-  background-color: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  margin: 40px auto;
-  max-width: 700px;
-}
-
-.description-box p {
-  font-size: 17px;
-}
-
-/* Team and Section Styling */
-.teamBack {
-  background-color: var(--accent-soft);
-  margin: 40px 0;
-  padding: 30px;
-  border-radius: 12px;
-}
-
-.teamSection section {
-  margin-bottom: 20px;
-}
-
-.teamTags h4 {
+/* logo */
+.logo{
   display: inline-block;
-  background-color: var(--highlight-color);
-  padding: 6px 12px;
-  margin: 5px;
-  border-radius: 8px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+.logo:hover {
+  box-shadow:0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Play Button */
-.play-button {
-  font-family: 'Luckiest Guy', cursive;
-  font-size: 40px;
-  color: white;
-  background-color: var(--wood-color);
-  padding: 20px 60px;
-  border: none;
-  border-radius: 20px;
-  box-shadow: inset -4px -4px 0 rgba(0,0,0,0.2);
-  text-shadow: var(--text-shadow);
-  margin: 40px auto;
+.logo-img {
+  width: 60px;
+  height: 60px;
   display: block;
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  object-fit: cover;
+  border-radius: 50%;
 }
+/* ending of logo */
 
-.play-button:hover {
-  transform: scale(1.05);
-  background-color: var(--wood-dark);
-}
-
-/* Download link styling */
-a.download-link {
-  display: block;
-  text-align: center;
-  margin: 20px 0;
-  font-weight: bold;
+body {
+  font-family: 'Fredoka', sans-serif;
+  background-color: var(--primary-bg);
   color: var(--primary-color);
-  text-decoration: underline;
+  padding: 20px;
+  line-height: 1.6;
+  width: 1200px;
 }
 
-/* Creator footer */
-footer {
-  margin-top: 60px;
-  padding: 30px;
-  text-align: center;
-  background-color: #cfcfcf;
-  border-radius: 12px;
-  font-size: 18px;
-}
 
-/* Responsive tweaks */
-@media (max-width: 600px) {
-  .interaction-section {
-    flex-direction: column;
-  }
-
-  .play-button {
-    font-size: 32px;
-    padding: 16px 40px;
-  }
-}
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #f2f2f2;
-    }
-
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: start;
-      gap: 20px;
-      max-width: 1000px;
-      margin: auto;
-      flex-wrap: wrap;
-    }
-
-    .description-box {
-      background-color: white;
-      padding: 20px;
-      flex: 1 1 400px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      max-width: 480px;
-    }
-
-    .description-box p {
-      margin: 0;
-      font-size: 16px;
-      line-height: 1.6;
-      color: #333;
-    }
