@@ -27,16 +27,31 @@
             <a href="" download=>
                 <button class="rebote">Download</button>
             </a>
-
         </div>
-        <div class="interaction-section">
-            <div id="shortg">
-            
+        <div class="interactionSection">
+            <div id="shortGame">
+                <img id="oven" src="/images/Pizza Oven Option 1.png" alt="Oven">
+                <img id="character" src="/images/hero_black.png" alt="Small character">
+                <div id="woodenGroup">
+                    <img src="/images/Wooden Pan Option 2.png" alt="Wooden">
+                    <img src="/images/Wooden Pan Option 2.png" alt="Wooden">
+                    <img src="/images/Wooden Pan Option 2.png" alt="Wooden">
+                    <img src="/images/Wooden Pan Option 2.png" alt="Wooden">
+                </div>
+                <div id="ingredientsGroup">
+                    <img src="/images/cooking up success jalapeno.png" alt="Wooden">
+                    <img src="/images/cooking up success onion.png" alt="Wooden">
+                    <img src="/images/cooking up success sausage.png" alt="Wooden">
+                    <img src="/images/cooking up success pepperoni.png" alt="Wooden">
+                </div>
+                <div id="dialogo"></div>
             </div>
         <!--This is the short information section -->
             <div id="shortg-info">
-                <h2></h2>
-                <p></p>
+                <h2>Cook, Budget, and Outsmart the Challenge</h2>
+                <p>Step into the sizzling world of Cooking Up Success, where your kitchen becomes your classroom and every purchase is a test of strategy. This isn’t just a game—it’s a skill-building playground. Whether you're choosing your next ingredient or calculating your remaining cash, every decision helps you develop smarter habits for real-life success. <br>
+                Are you ready to master the recipe for resourcefulness?
+                </p>
             </div>    
         </div>
         <div class="teamBack">
@@ -97,4 +112,39 @@
         
     </footer>
 </body>
+
+<script>
+const dialogo = document.getElementById("dialogo");
+const frases = [
+  "Welcome to Cooking Up Success! This is a short demo of the real game.",
+  "Choose a few ingredients and see how it changes your budget.",
+  "Once your budget is 0, you can't add more ingredients.",
+  "Press Start to prepare a new pizza."
+];
+
+let fraseActual = 0;
+let letra = 0;
+
+function escribirLetra() {
+  if (letra < frases[fraseActual].length) {
+    dialogo.textContent += frases[fraseActual][letra];
+    letra++;
+    setTimeout(escribirLetra, 50); // velocidad de escritura
+  } else {
+    setTimeout(() => {
+      fraseActual++;
+      if (fraseActual >= frases.length) {
+        fraseActual = 0; // reiniciar ciclo
+      }
+      dialogo.textContent = ""; // limpiar texto
+      letra = 0;
+      escribirLetra();
+    }, 1000); // pausa entre frases
+  }
+}
+
+escribirLetra();
+</script>
+
+
 </html>
