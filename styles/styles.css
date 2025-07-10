@@ -17,6 +17,30 @@ header {
   align-items: center;
 }
 
+header {
+  max-width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  background: #ff6347; /* tomato red */
+}
+
+header .logo {
+  height: 50px;
+}
+
+nav {
+  margin-left: auto;
+  padding-bottom: 10px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
 .hamburger-button nav {
   display: flex;
   gap: 15px;
@@ -30,19 +54,28 @@ header {
   display: block;
 }
 
+
+
 /* general attributes */
-main{
-  margin: 0;
-  display: grid;
+body {
+  font-family: 'Fredoka', sans-serif;
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+  line-height: 1.6;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 /* Hero images */
 .heroBackground{
-  width: 1200px;
-  display: grid;
-  grid-row: 1/4;
-  grid-template-columns: repeat(4, 25%);
+  background-image: url("https://picsum.photos/1600/800");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin-top: -40px;
+  padding: 0;
 }
+
 
 
 /* logo */
@@ -67,14 +100,61 @@ main{
 }
 /* ending of logo */
 
-body {
-  font-family: 'Fredoka', sans-serif;
-  background-color: var(--primary-bg);
-  color: var(--primary-color);
-  padding: 20px;
-  line-height: 1.6;
-  width: 1200px;
-}
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    max-width: 1000px;
+    margin: auto;
+    flex-wrap: wrap;
+  }
+  .description-box {
+    background-color: white;
+    padding: 20px;
+    flex: 1 1 400px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    max-width: 480px;
+  }
+  .description-box p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Responsive tweaks */
@@ -87,84 +167,4 @@ body {
     font-size: 32px;
     padding: 16px 40px;
   }
-}
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #f2f2f2;
-    }
-
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: start;
-      gap: 20px;
-      max-width: 1000px;
-      margin: auto;
-      flex-wrap: wrap;
-    }
-
-    .description-box {
-      background-color: white;
-      padding: 20px;
-      flex: 1 1 400px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      max-width: 480px;
-    }
-
-    .description-box p {
-      margin: 0;
-      font-size: 16px;
-      line-height: 1.6;
-      color: #333;
-    }
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background: #f5f5f5;
-  color: #333;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  padding: 10px 20px;
-  background: #ff6347; /* tomato red */
-}
-
-header .logo {
-  height: 50px;
-}
-
-nav {
-  margin-left: auto;
-}
-
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-main {
-  padding: 40px 20px;
-}
-
-#about-creators h1 {
-  margin-bottom: 20px;
-  color: #ff6347;
-}
-
-#about-creators ul {
-  list-style: none;
-  padding: 0;
-}
-
-#about-creators li {
-  margin-bottom: 10px;
 }
