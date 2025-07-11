@@ -30,6 +30,7 @@
         </div>
         <div class="interactionSection">
             <div id="shortGame">
+                <div id="kitchenBack"></div>
                 <img id="oven" src="/images/Pizza Oven Option 1.png" alt="Oven">
                 <img id="character" src="/images/hero_black.png" alt="Small character">
                 <div id="woodenGroup">
@@ -38,11 +39,17 @@
                     <img src="/images/Wooden Pan Option 2.png" alt="Wooden">
                     <img src="/images/Wooden Pan Option 2.png" alt="Wooden">
                 </div>
+                <div id="selectionBoxes">
+                    <div class="box" id="box1"></div>
+                    <div class="box" id="box2"></div>
+                    <div class="box" id="box3"></div>
+                </div>
+
                 <div id="ingredientsGroup">
-                    <img src="/images/cooking up success jalapeno.png" alt="Wooden">
-                    <img src="/images/cooking up success onion.png" alt="Wooden">
-                    <img src="/images/cooking up success sausage.png" alt="Wooden">
-                    <img src="/images/cooking up success pepperoni.png" alt="Wooden">
+                    <img class="ingredient" src="/images/cooking up success jalapeno.png" alt="Jalapeño">
+                    <img class="ingredient" src="/images/cooking up success onion.png" alt="Onion">
+                    <img class="ingredient" src="/images/cooking up success sausage.png" alt="Sausage">
+                    <img class="ingredient" src="/images/cooking up success pepperoni.png" alt="Pepperoni">
                 </div>
                 <div id="dialogo"></div>
             </div>
@@ -114,36 +121,53 @@
 </body>
 
 <script>
-const dialogo = document.getElementById("dialogo");
-const frases = [
-  "Welcome to Cooking Up Success! This is a short demo of the real game.",
-  "Choose a few ingredients and see how it changes your budget.",
-  "Once your budget is 0, you can't add more ingredients.",
-  "Press Start to prepare a new pizza."
-];
+    const dialogo = document.getElementById("dialogo");
+    const frases = [
+    "Welcome to Cooking Up Success! This is a short demo of the real game.",
+    "Choose a few ingredients and see how it changes your budget.",
+    "Once your budget is 0, you can't add more ingredients.",
+    "Press Start to prepare a new pizza."
+    ];
 
-let fraseActual = 0;
-let letra = 0;
+    let fraseActual = 0;
+    let letra = 0;
 
-function escribirLetra() {
-  if (letra < frases[fraseActual].length) {
-    dialogo.textContent += frases[fraseActual][letra];
-    letra++;
-    setTimeout(escribirLetra, 50); // velocidad de escritura
-  } else {
-    setTimeout(() => {
-      fraseActual++;
-      if (fraseActual >= frases.length) {
-        fraseActual = 0; // reiniciar ciclo
-      }
-      dialogo.textContent = ""; // limpiar texto
-      letra = 0;
-      escribirLetra();
-    }, 1000); // pausa entre frases
-  }
-}
+    function escribirLetra() {
+    if (letra < frases[fraseActual].length) {
+        dialogo.textContent += frases[fraseActual][letra];
+        letra++;
+        setTimeout(escribirLetra, 50); // velocidad de escritura
+    } else {
+        setTimeout(() => {
+        fraseActual++;
+        if (fraseActual >= frases.length) {
+            fraseActual = 0; // reiniciar ciclo
+        }
+        dialogo.textContent = ""; // limpiar texto
+        letra = 0;
+        escribirLetra();
+        }, 1000); // pausa entre frases
+    }
+    }
 
-escribirLetra();
+    escribirLetra();
+
+    let clickCount = 0;
+
+    document.querySelectorAll('.ingredient').forEach(img => {
+    img.addEventListener('click', () => {
+        if (clickCount < 3) {
+        const selectedBox = document.getElementById(`box${clickCount + 1}`);
+        const clone = img.cloneNode();
+        clone.style.width = '100%';
+        clone.style.height = '100%';
+        selectedBox.innerHTML = '';
+        selectedBox.appendChild(clone);
+        clickCount++;
+        }
+    });
+    });
+
 </script>
 
 

@@ -107,26 +107,45 @@ body {
 }
 
 .interactionSection{
-  height: 100vh;
+  height: 80vh;
   display: grid;
   grid-template-columns: 50% 50%;
 }
 
 #shortGame{
   position: relative;
+  
+}
+
+#kitchenBack{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-image: url('/images/kitchen_back.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(2px);
+
+}
+
+#character{
+  position: absolute;
+  width: 140px;
+  top: 20px;
 }
 
 #shortGame #oven{
   width: 400px;
   position: absolute;
-  top: 20%;
-  margin-left: -30px;
+  top: 24%;
+  margin-left: -50px;
+  filter: blur(1.2px);
 }
 
 /* Position and animation for the wooden */
 #woodenGroup{
   position: absolute;
-  top: 60%;
+  top: 64%;
   right: 10%;
   
 }
@@ -139,7 +158,7 @@ body {
 /* Position and animation for the ingredients */
 #ingredientsGroup{
   position: absolute;
-  top: 63%;
+  top: 68%;
   right: 6%;
   
 }
@@ -156,17 +175,39 @@ body {
 /* Character text */
 #dialogo {
   font-size: 1.2em;
-  padding: 10px;
+  padding: 5px 8px;
   background-color: #fff3cd;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  width: 400px;
-  height: 50px;
+  width: 420px;
+  height: 42px;
   position: absolute;
   top: 7%;
-  left: 20%;
+  left: 16%;
+  line-height: 20px;
 }
 
+#selectionBoxes {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  position: absolute;
+  right: 23%;
+  top: 56%;
+}
+
+.box {
+  width: 45px;
+  height: 45px;
+  border: 2px dashed #ccc;
+  background-color: #f7f1f1;
+  
+
+}
+
+.ingredient{
+  cursor: pointer;
+}
 
 
 
