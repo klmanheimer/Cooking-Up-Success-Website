@@ -78,7 +78,22 @@ body {
      1px  1px 0 #000;
   padding: 0;
   margin: 0;  
+  animation: fadeIn 2s ease-out forwards;
+  opacity: 0;
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 
 .heroBackground a{
   margin-top: 50px;
@@ -134,26 +149,27 @@ body {
 #character{
   position: absolute;
   width: 140px;
-  top: 20px;
+  top: 1%;
+  left: 4%;
 }
 
 #shortGame #oven{
   width: 400px;
   position: absolute;
-  top: 24%;
-  margin-left: -50px;
+  top: 22%;
+  margin-left: px;
   filter: blur(1.2px);
 }
 
 /* Position and animation for the wooden */
 #woodenGroup{
   position: absolute;
-  top: 64%;
-  right: 10%;
+  top: 69%;
+  right: 15%;
   
 }
 #woodenGroup img{
-  width: 145px;
+  width: 125px;
   margin-right: -45px;
 }
 
@@ -161,12 +177,12 @@ body {
 /* Position and animation for the ingredients */
 #ingredientsGroup{
   position: absolute;
-  top: 68%;
-  right: 6%;
+  top: 73%;
+  right: 11%;
   
 }
 #ingredientsGroup img{
-  width: 100px;
+  width: 80px;
   margin-right: 0px;
   transition: transform 0.3s ease;
 }
@@ -185,8 +201,8 @@ body {
   width: 420px;
   height: 42px;
   position: absolute;
-  top: 7%;
-  left: 16%;
+  top: 5%;
+  left: 20%;
   line-height: 20px;
 }
 
@@ -195,21 +211,33 @@ body {
   gap: 10px;
   margin-bottom: 20px;
   position: absolute;
-  right: 23%;
-  top: 56%;
+  right: 22%;
+  top: 63%;
 }
 
 .box {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border: 2px dashed #ccc;
   background-color: #f7f1f1;
-  
-
 }
 
 .ingredient{
   cursor: pointer;
+}
+
+@keyframes girar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+#bigPizzaImg{
+  width: 190px;
+  position: absolute;
+  top: 20%;
+  right: 20%;
+  animation: girar 6s linear infinite;
+
 }
 
 /* Interaction section information */
