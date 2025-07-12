@@ -29,8 +29,8 @@
             </a>
         </div>
         <div class="interactionSection">
+            <div id="kitchenBack"></div>
             <div id="shortGame">
-                <div id="kitchenBack"></div>
                 <img id="oven" src="/images/Pizza Oven Option 1.png" alt="Oven">
                 <img id="character" src="/images/hero_black.png" alt="Small character">
                 <div id="woodenGroup">
@@ -55,10 +55,14 @@
             </div>
         <!--This is the short information section -->
             <div id="shortg-info">
-                <h2>Cook, Budget, and Outsmart the Challenge</h2>
-                <p>Step into the sizzling world of Cooking Up Success, where your kitchen becomes your classroom and every purchase is a test of strategy. This isn’t just a game—it’s a skill-building playground. Whether you're choosing your next ingredient or calculating your remaining cash, every decision helps you develop smarter habits for real-life success. <br>
-                Are you ready to master the recipe for resourcefulness?
+                <h2>COOK, BUDGET, and OUTSMART the Challenge</h2>
+                <p>In this game… you’re the boss. You are responsible for starting and opening a local pizzeria. You’re given a certain amount of money to purchase items like kitchen equipment, ingredients, and tools. <br>The goal is to grow your company while gaining experience making decisions that affect your business and profits in real time. Your kitchen becomes your classroom, and every purchase is a test of strategy. Whether choosing your next ingredient or calculating remaining cash, every decision helps build smarter habits for real-life success. <br> Are you ready to master the recipe for resourcefulness?
                 </p>
+                <div id="startContainer">
+                    <img src="/images/pizzaSlide.png" id="pizza" alt="Pizza">
+                    <button id="startButton">Start</button>
+                </div>
+                <img id="redCharacter" src="/images/hero_red.png" alt="Hero color Red">
             </div>    
         </div>
         <div class="teamBack">
@@ -167,6 +171,33 @@
         }
     });
     });
+
+    
+    // 💥 Función de reinicio con el botón Start
+    document.getElementById('startButton').addEventListener('click', () => {
+    for (let i = 1; i <= 3; i++) {
+        document.getElementById(`box${i}`).innerHTML = '';
+    }
+    clickCount = 0;
+    });
+
+    <!-- Animate Pizza -->
+        document.getElementById('startButton').addEventListener('click', () => {
+    const pizza = document.getElementById('pizza');
+    const button = document.getElementById('startButton');
+    const maxDistance = button.offsetWidth - pizza.offsetWidth;
+
+    // Mueve la pizza al extremo derecho
+    pizza.style.left = `${maxDistance}px`;
+
+    // ⏳ Regresa después de 3 segundos
+    setTimeout(() => {
+        pizza.style.left = '0px';
+    }, 3000);
+    });
+
+
+
 
 </script>
 
