@@ -30,27 +30,59 @@ header {
   flex-wrap: wrap;
 }
 
-.logo {
-  width: 120px;
-  height: auto;
+/* logo */
+.logo{
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+.logo:hover {
+  box-shadow:0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.logo-img {
+  width: 350px;
+  height: 350px;
+  display: block;
+  object-fit: cover;
+  border-radius: 50%;
+}
+/* ending of logo */
+
+/* header section */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  max-width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  background: #fcc099; /* tomato red */
+}
+
+header .logo {
+  height: 90px;
 }
 
 nav {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  margin-left: auto;
+  padding-bottom: 10px;
 }
 
 nav a {
+  margin: 0 20px;
   text-decoration: none;
   color: white;
   font-weight: bold;
-  transition: color 0.3s ease;
 }
 
-nav a:hover {
-  color: #222;
-}
+
 
 /* Hamburger menu (hidden by default) */
 #check,
