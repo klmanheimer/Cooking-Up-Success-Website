@@ -57,8 +57,9 @@
         <!--This is the short information section -->
             <div id="shortg-info">
                 <h2>COOK, BUDGET, and OUTSMART the Challenge</h2>
-                <p>In this game… you’re the boss. You are responsible for starting and opening a local pizzeria. You’re given a certain amount of money to purchase items like kitchen equipment, ingredients, and tools. <br>The goal is to grow your company while gaining experience making decisions that affect your business and profits in real time. Your kitchen becomes your classroom, and every purchase is a test of strategy. Whether choosing your next ingredient or calculating remaining cash, every decision helps build smarter habits for real-life success. <br> Are you ready to master the recipe for resourcefulness?
+                <p>In this game… you’re the boss. You are responsible for starting and opening a local pizzeria. You’re given a certain amount of money to purchase items like kitchen equipment, ingredients, and tools. <br>The goal is to grow your company while gaining experience making decisions that affect your business and profits in real time. Your kitchen becomes your classroom, and every purchase is a test of strategy. Whether choosing your next ingredient or calculating remaining cash, every decision helps build smarter habits for real-life success. 
                 </p>
+
                 <div id="startContainer">
                     <img src="/images/pizzaSlide.png" id="pizza" alt="Pizza">
                     <button id="startButton">Start</button>
@@ -66,14 +67,32 @@
                 <img id="redCharacter" src="/images/hero_red.png" alt="Hero color Red">
             </div>    
         </div>
+        <div class="adventagesBack">
+            <div class="left-side">
+                <h2>WINNING MEANS, TRANSFORMING</h2>
+                <p>We are students, dreamers, explorers… but also learners in the real world.
+                On outings, activities, and everyday decisions, we often forget to plan within a budget. Isn’t that pretty common?
+                Our game is designed to strengthen a crucial life skill: financial awareness — making wise decisions and learning to balance what we want with what we can afford. <br>
+                As President N. Eldon Tanner taught:
+                “Budgeting is the plan that enables us to live within our income and avoid debt.”
+                </p>
+                <img src="images/hero_black_cat.png" alt="">
+            </div>
+            <div class="right-side">
+                <img src="images/backBack2.png" alt="">
+                <div id="deliverer" class="deliverer-animation"></div>
+                <div id="deliverer-message" class="deliverer-message">An epic journey is about to begin...</div>
 
+            </div>
+
+
+        </div>
 
         <div class="teamBack">
-            <img src="/gifts/92.gif" alt="">
-            <img src="" alt="">
             <div class="Ulogo">
                 <img src="/images/byuiLogo.png" alt="Byui Logo">
             </div>
+            <img src="images/base.png" alt="Base de logo">
             <img class="ourTeamP1" src="images/us1.png" alt="Our team">
             <img class="ourTeamP2" src="images/us2.png" alt="Our team">
             <img class="ourTeamP3" src="images/us3.png" alt="Our team">
@@ -202,6 +221,32 @@
     }, 3000);
     });
 
+        
+      const deliverer = document.getElementById("deliverer");
+    const message = document.getElementById("deliverer-message");
+
+    function animateDeliverer() {
+        // Reinicia la animación removiendo y volviendo a agregar la clase
+        deliverer.style.animation = "none";
+        void deliverer.offsetWidth; // Trigger reflow para reiniciar animación
+        deliverer.style.animation = "delivererSlide 6s ease-in-out forwards";
+
+        // Mostrar mensaje después de que llega al centro (ajusta el tiempo si lo necesitas)
+        setTimeout(() => {
+        message.style.opacity = 1;
+        }, 1800);
+
+        // Ocultarlo antes de que se vaya
+        setTimeout(() => {
+        message.style.opacity = 0;
+        }, 4500);
+    }
+
+    // Ejecutar al cargar y repetir cada 6 segundos
+    animateDeliverer();
+    setInterval(animateDeliverer, 6000);
+
+    
 
 
 

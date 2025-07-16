@@ -263,9 +263,10 @@ body {
 
 #shortg-info h2{
   text-align: center;
-  margin-bottom: 0;
+  margin: 0;
   color: #e49b4d;
-  font-size: 25px;
+  font-size: 30px;
+  line-height: 30px;
   text-shadow: 
     -0.5px -0.5px 0 #000,  
      0.5px -0.5px 0 #000,
@@ -273,11 +274,18 @@ body {
      0.5px  0.5px 0 #000;
 }
 
+#shortg-info p{
+  font-size: 19px;
+  margin-top: 1;
+  padding-top: 1px;
+  line-height: 25px;
+}
+
 #redCharacter{
   width: 120px;
   position: absolute;
-  right: 70px;
-  bottom: 30px;
+  right: 10px;
+  bottom: 1%;
   transform: scaleX(-1);   /* Voltea horizontalmente */
   display: inline-block;
 }
@@ -306,9 +314,11 @@ body {
   font-weight: bold;
   animation: startPulse 1.2s ease-in-out infinite;
   cursor: pointer;
+  margin-top: -20px;
 }
 
 #pizza {
+  margin-top: -10px;
   position: absolute;
   top: 50%;
   left: 0%;
@@ -337,15 +347,112 @@ body {
   }
 }
 
+/* Adventages section */
+.adventagesBack{
+  height: 75vh;
+  margin-top: 0;
+  padding: 0;
+  background-color: #fff3cd;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  overflow: hidden;
+}
+
+.left-side {
+  margin: 40px;
+  margin-top: 20px;
+  padding: 0 30px;
+  border-radius: 25px;
+  animation: fadeInLeft 1s ease-in;
+  background-color: #e49b4d;
+  font-size: 25px; 
+  color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.left-side h2{
+  padding: 0;
+  margin-top: 20px;
+  text-shadow: 
+      -0.5px -0.5px 0 #000,  
+      0.5px -0.5px 0 #000,
+      -0.5px  0.5px 0 #000,
+      0.5px  0.5px 0 #000;  
+}
+
+.left-side p{
+  font-size: 22px;
+  margin-top: -40px;
+  line-height: 30px;
+}
+
+.left-side img{
+  position: absolute;
+  right: -5%;
+  bottom: 0%;
+}
+
+.right-side {
+  flex: 1;
+  position: relative;
+}
+
+.right-side img{
+  position: absolute;
+  left: -10%;
+  top: 8%;
+  z-index: 0;
+}
+
+.deliverer-animation {
+  position: absolute;
+  top: 60%;
+  left: -200px;
+  transform: translateY(-50%);
+  width: 170px;
+  height: 150px;
+  background-image: url('../images/us3.png'); 
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
+.deliverer-message {
+  position: absolute;
+  top: 79%;
+  left: 62%;
+  width: 500px;
+  transform: translate(-50%, -50%);
+  color: #59678b;
+  font-size: 1.5rem;
+  text-shadow: 0 0 10px rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+}
+
+
+@keyframes delivererSlide {
+  0%   { left: -200px; opacity: 0; }
+  30%  { left: 50%; opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+  70%  { left: 50%; opacity: 1; transform: translate(-50%, -50%) scale(1); }
+  100% { left: 120%; opacity: 0; }
+}
+
+
 
 /* Team characters section */
 .teamBack{
-  background-image: url(../images/backGround3.jpg);
-  height: 100vh;
+  background-image: url(../images/fondo.avif);
+  height: 120vh;
   background-size: cover;
-  backdrop-filter: blur(9px);
-  filter: brightness(0.9) contrast(1.1) saturate(1.2); 
+  backdrop-filter: blur(7px);
+  filter: brightness(0.9) contrast(0.9) saturate(1.1); 
   position: relative;
+  background-position: bottom;
+  width: 100%;
+  margin-top: -70px;
 }
 
 .ourTeamP1{
@@ -369,6 +476,23 @@ body {
   width: 235px;
 }
 
+.Ulogo{
+  animation: bounceY 1s ease-in-out infinite;
+  position: absolute;
+  bottom: 1%;
+  left: 6%;
+}
+
+@keyframes bounceY {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-100px); }
+  100% { transform: translateY(0); }
+}
+
+.baseLogo{
+  position: absolute;
+  bottom: 0;
+}
 
 
 
