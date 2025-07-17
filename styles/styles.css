@@ -35,6 +35,20 @@ header .logo {
   top: 2%;
 }
 
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  max-width: 100%; 
+  height: 100px; 
+  background: #e49b4d; /* tomato red */
+}
+
+footer .logo {
+  height: 90px;
+}
+
 nav {
   margin-left: auto;
   padding-bottom: 10px;
