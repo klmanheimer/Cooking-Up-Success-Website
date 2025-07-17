@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Luckiest+Guy&display=swap');
+
 /* styles/about.css */
 
 #fcf8c8	
@@ -24,14 +26,24 @@ body {
   color: #333;
 }
 
-/* Header and Navigation */
+/* header section */
 header {
-  background-color: #fae7ad;
-  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  max-width: 100%;
+  height: 90px;
+  padding: 0 29px; 
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  background: #e49b4d; /* tomato red */
+}
+
+header .logo {
+  height: 85px;
 }
 
 /* logo */
@@ -54,25 +66,6 @@ header {
   border-radius: 50%;
 }
 /* ending of logo */
-
-/* header section */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header {
-  max-width: 100%;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  background: #fcc099; /* tomato red */
-}
-
-header .logo {
-  height: 90px;
-}
 
 .about, .home{ 
   color: white; 
@@ -122,7 +115,7 @@ footer {
   align-items: center;
   max-width: 100%; 
   height: 100px; 
-  background: #fcc099; /* tomato red */
+  background: #e49b4d; /* tomato red */
 }
 
 footer .logo {
