@@ -634,17 +634,18 @@ button:hover {
     background-color: #fefce8;
     color: #78350f;
     text-align: center;
-    padding: 30px 20px;
+    padding: 20px 10px;
     font-family: 'Segoe UI', sans-serif;
     font-size: 1em;
     box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.05);
     border-top: 2px solid #facc15;
+    display: flex;
+    flex-direction: column;
   }
 
-  #game-footer p {
-    margin: 6px 0;
-  }
-
+#game-footer p{
+  padding: 0;
+}
 
 
 /* logo */
@@ -655,43 +656,9 @@ button:hover {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s;
 }
-.logo:hover {
-  box-shadow:0 4px 16px rgba(0, 0, 0, 0.2);
-}
-
-.logo-img {
-  width: 70px;
-  height: 70px;
-  display: block;
-  object-fit: cover;
-  border-radius: 50%;
-}
-/* ending of logo */
 
 
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    gap: 20px;
-    max-width: 1000px;
-    margin: auto;
-    flex-wrap: wrap;
-  }
-  .description-box {
-    background-color: white;
-    padding: 20px;
-    flex: 1 1 400px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    max-width: 480px;
-  }
-  .description-box p {
-    margin: 0;
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-  }
+
 
   
     
