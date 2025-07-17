@@ -479,7 +479,7 @@ body {
 .Ulogo{
   animation: bounceY 1s ease-in-out infinite;
   position: absolute;
-  bottom: 1%;
+  bottom: 10%;
   left: 6%;
 }
 
@@ -491,9 +491,33 @@ body {
 
 .baseLogo{
   position: absolute;
-  bottom: 0;
+  bottom: 1%;
+  left: 1%;
+  width: 300px;
 }
 
+.teamSectionImg{
+  position: absolute;
+  top: 8%;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.teamSectionImg section img{
+  width: 260px;
+  position: relative;
+}
+
+.teamSectionText{
+  position: absolute;
+  top: 9%;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+}
 
 
 
