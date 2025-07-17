@@ -12,22 +12,27 @@
 }
 /* header section */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-header {
   max-width: 100%;
-  height: 90px;
+  height: 20px;
   padding: 0 29px; 
   display: flex;
   align-items: center;
-  background: #e49b4d; /* tomato red */
+  background-color: #fefce8;
+  color: #78350f;
+  text-align: center;
+  padding: 20px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 1em;
+  box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.05);
+  border-top: 2px solid #facc15;
+  border-bottom: 2px solid #facc15;
+  position: relative;
 }
 
 header .logo {
   height: 85px;
+  position: absolute;
+  top: 2%;
 }
 
 nav {
@@ -38,12 +43,12 @@ nav {
 nav a {
   margin: 0 10px;
   text-decoration: none;
-  color: white;
+  color: #78350f;
   font-weight: bold;
 }
 
 .about, .home{ 
-  color: white; 
+  color: #78350f;
   font-weight: bold; 
   text-align: center;
   font-size: 1.5em; 
@@ -448,7 +453,7 @@ body {
   height: 120vh;
   background-size: cover;
   backdrop-filter: blur(7px);
-  filter: brightness(0.9) contrast(0.9) saturate(1.1); 
+  filter: brightness(1) contrast(0.9) saturate(1.1); 
   position: relative;
   background-position: bottom;
   width: 100%;
@@ -519,6 +524,112 @@ body {
   font-size: 20px;
 }
 
+
+
+#info-box {
+  position: absolute;
+  top: 24%;
+  right: 7%;
+  background-color: #fff3cd;
+  border-radius: 10px;
+  padding: 2px 20px;
+  font-size: 1.2em;
+  text-align: center;
+  max-width: 600px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#text-content {
+  opacity: 0;
+  transition: opacity 1.2s ease;
+ }
+
+/* Form section */
+.formSection{
+  background-color:#fff3cd ;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#feedback-section {
+  background: #e49b4d;
+  border-radius: 14px;
+  padding: 30px;
+  max-width: 700px;
+  margin: 60px auto;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+#feedback-section h2 {
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  margin: 0;
+}
+
+#feedback-section p{
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+#feedback-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+label {
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 0;
+}
+select, input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  margin-top: -10px;
+}
+button {
+  background-color: white;
+  color: #000;
+  border: none;
+  padding: 12px 20px;
+  margin-top: 0px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: wheat;
+}
+#confirmation-message p {
+  font-size: 1.1em;
+  background-color: #fef9c3;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #78350f;
+}
+
+/* Footer */
+#game-footer {
+    background-color: #fefce8;
+    color: #78350f;
+    text-align: center;
+    padding: 30px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1em;
+    box-shadow: 0 -6px 12px rgba(0, 0, 0, 0.05);
+    border-top: 2px solid #facc15;
+  }
+
+  #game-footer p {
+    margin: 6px 0;
+  }
 
 
 
